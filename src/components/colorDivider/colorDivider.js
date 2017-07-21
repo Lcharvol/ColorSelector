@@ -8,6 +8,7 @@ class ColorDivider extends Component {
     red: -1,
     green: -1,
     blue: -1,
+    pressed: false,
   }
 
   handleChangeStyle = (position) => {
@@ -31,12 +32,20 @@ class ColorDivider extends Component {
       this.setState({blue: blue});
     if (position === "left")
       this.setState({green: green});
+      window.addEventListener("mouseup", () => {this.setState({ pressed: false})});
+  }
+
+  handleChangePress = () => {
+    const { presssed } = this.state;
+
+    this.setState({ pressed: true });
   }
 
   render () {
-    const { position } = this.props;
+    const { position} = this.props;
     const { red, green, blue} = this.props.color;
-
+    const { pressed } = this.state;
+    console.log(pressed);
     let divStyle = {
       positon: "relative",
       width: "50px",
@@ -74,6 +83,7 @@ class ColorDivider extends Component {
         className="colorDivider"
         style={divStyle}
         onClick={() => this.handleChangeStyle(position)}
+        onMouseDown={this.handleChangePress}
       >
       </div>
     );
