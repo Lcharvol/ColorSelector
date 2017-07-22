@@ -12,7 +12,9 @@ class ColorRender extends Component {
     }
 
     return (
-      <div className="colorRender" style={divStyle} />
+      <div className="colorRender" style={divStyle}>
+        <div className="sphereEffect" />
+      </div>
     );
   };
 }

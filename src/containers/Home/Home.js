@@ -5,6 +5,7 @@ import './Home.css';
 import ColorSelector from '../../components/colorSelector';
 import Header from '../../components/Header';
 import MainColor from '../../components/MainColor';
+import Result from '../../components/Result';
 
 class Home extends Component {
 
@@ -50,6 +51,7 @@ class Home extends Component {
             id={3}
           />
         </div>
+        <Result />
       </div>
     );
   }

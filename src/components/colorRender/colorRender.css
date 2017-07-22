@@ -14,3 +14,40 @@
     0 1em 3em -0.5em rgba(150,150,150,0.1),
     0 3em 3em -0.25em rgba(150,150,150,0.1);
 }
+.sphereEffect
+{
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius: 100px;
+  opacity: 0.4;
+  background: radial-gradient(circle at 50% 120%, white, white 10%, white 80%, white 100%);
+}
+.sphereEffect {
+  background: radial-gradient(circle at bottom, #81e8f6, #76deef 10%, #055194 80%, #062745 100%); }
+  .sphereEffect:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    background: radial-gradient(circle at top, white, rgba(255, 255, 255, 0) 58%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 2; }
+  .sphereEffect:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    z-index: 2;
+    -webkit-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg); }

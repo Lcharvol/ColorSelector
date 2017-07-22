@@ -9,6 +9,7 @@
   margin-left:220px;
   margin-right:220px;
   background-color: red;
+  z-index: 0;
   box-shadow:
     inset 0 2em 5em -7em rgba(250, 96, 96, 0.4),
     0 0.3em 0.5em -0.2em rgba(150,150,100,0.1),
@@ -16,3 +17,41 @@
     0 1em 3em -0.5em rgba(150,150,150,0.1),
     0 3em 3em -0.25em rgba(150,150,150,0.1);
 }
+.sphereEffect2
+{
+  position: absolute;
+  width:250px;
+  height:250px;
+  border-radius: 200px;
+  opacity: 0.5;
+  background: radial-gradient(circle at 50% 120%, white, white 10%, white 80%, white 100%);
+}
+.sphereEffect2 {
+  background: radial-gradient(circle at bottom, #81e8f6, #76deef 10%, #055194 80%, #062745 100%); }
+  .sphereEffect:before {
+    content: "";
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 100%;
+    background: radial-gradient(circle at top, white, rgba(255, 255, 255, 0) 58%);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    z-index: 2; }
+  .sphereEffect2:after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+    -webkit-filter: blur(1px);
+    filter: blur(1px);
+    z-index: 2;
+    -webkit-transform: rotateZ(-30deg);
+    transform: rotateZ(-30deg);
+  }

@@ -12,7 +12,9 @@ class MainColor extends Component {
     }
 
     return (
-      <div className="mainColor" style={divStyle} />
+      <div className="mainColor" style={divStyle}>
+        <div className="sphereEffect2"/>
+      </div>
     );
   };
 }
