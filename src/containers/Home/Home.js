@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import './Home.css';
 
 import ColorSelector from '../../components/colorSelector';
-import Background from '../../components/Background';
 import Header from '../../components/Header';
 import MainColor from '../../components/MainColor';
 
@@ -32,7 +31,6 @@ class Home extends Component {
         <Header
           color={this.state}
         />
-        <Background />
         <div className="selectorContainer" >
           <ColorSelector
             upgradeColor={this.upgradeColor}
