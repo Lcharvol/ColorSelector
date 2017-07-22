@@ -9,10 +9,13 @@ class ColorDivider extends Component {
     green: -1,
     blue: -1,
     pressed: false,
+    startPressX: 0,
+    startPressY: 0,
   }
 
   handleChangeStyle = (position) => {
     const { handleChangeColor } = this.props;
+
     if (position === "top")
       this.setState({red: this.state.red + 10})
     if (position === "right")
@@ -20,6 +23,20 @@ class ColorDivider extends Component {
     if (position === "left")
       this.setState({green: this.state.green + 10})
     handleChangeColor(this.state.red, this.state.green, this.state.blue);
+  }
+
+  drag = (e) => {
+    const { position } = this.props;
+
+    if (this.state.pressed === true) {
+      if (position === "top")
+        this.setState({ red: (e.screenX)})
+      if (position === "right")
+        this.setState({ blue: (e.screenX )})
+      if (position === "left")
+        this.setState({ green: (e.screenX)})
+      this.handleChangeStyle(position);
+    }
   }
 
   componentWillMount = () => {
@@ -32,20 +49,19 @@ class ColorDivider extends Component {
       this.setState({blue: blue});
     if (position === "left")
       this.setState({green: green});
-      window.addEventListener("mouseup", () => {this.setState({ pressed: false})});
+    window.addEventListener("mouseup", () => {this.setState({ pressed: false})});
+    window.addEventListener("mousemove", (e) => this.drag(e));
   }
 
-  handleChangePress = () => {
-    const { presssed } = this.state;
-
-    this.setState({ pressed: true });
+  handleChangePress = (e) => {
+    this.setState({ pressed: true, startPressY: e.clientY, startPressX: e.clientX});
   }
 
   render () {
     const { position} = this.props;
     const { red, green, blue} = this.props.color;
     const { pressed } = this.state;
-    console.log(pressed);
+
     let divStyle = {
       positon: "relative",
       width: "50px",
@@ -56,7 +72,7 @@ class ColorDivider extends Component {
     if (position === "top") {
       divStyle = {
         margin: "auto",
-        marginTop: "-25px",
+        marginTop: "-35px",
         backgroundColor: `rgb(${red}, 0, 0)`,
         ...divStyle,
 
@@ -82,8 +98,7 @@ class ColorDivider extends Component {
       <div
         className="colorDivider"
         style={divStyle}
-        onClick={() => this.handleChangeStyle(position)}
-        onMouseDown={this.handleChangePress}
+        onMouseDown={(e) => this.handleChangePress(e)}
       >
       </div>
     );
