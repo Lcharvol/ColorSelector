@@ -1,0 +1,10 @@
+.mainColor
+{
+  width:250px;
+  height:250px;
+  border-radius: 200px;
+  margin:auto;
+  margin-top:250px;
+  margin-bottom: 100px;
+  background-color: red;
+}

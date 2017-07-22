@@ -23,9 +23,10 @@ class ColorSelector extends Component {
 
   render () {
     const { red, green, blue} = this.state.color;
+    const { upgradeColor, id} = this.props;
 
     return (
-      <div className="colorSelector">
+      <div className="colorSelector" onMouseDown={() => upgradeColor(id, red, green, blue)}>
         <ColorDivider
           position="top"
           handleChangeColor = {this.handleChangeColor}

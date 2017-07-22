@@ -31,11 +31,11 @@ class ColorDivider extends Component {
 
     if (this.state.pressed === true) {
       if (position === "top")
-        this.setState({ red: (e.screenX - startPressX)})
+        this.setState({ red: (Math.abs(e.screenX - startPressX))})
       if (position === "right")
-        this.setState({ blue: (e.screenX - startPressX )})
+        this.setState({ blue: (Math.abs(e.screenX - startPressX))})
       if (position === "left")
-        this.setState({ green: (e.screenX  - startPressX)})
+        this.setState({ green: (Math.abs(e.screenX - startPressX))})
       this.handleChangeStyle(position);
     }
   }
