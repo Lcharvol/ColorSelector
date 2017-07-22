@@ -27,14 +27,15 @@ class ColorDivider extends Component {
 
   drag = (e) => {
     const { position } = this.props;
+    const { startPressX } = this.state;
 
     if (this.state.pressed === true) {
       if (position === "top")
-        this.setState({ red: (e.screenX)})
+        this.setState({ red: (e.screenX - startPressX)})
       if (position === "right")
-        this.setState({ blue: (e.screenX )})
+        this.setState({ blue: (e.screenX - startPressX )})
       if (position === "left")
-        this.setState({ green: (e.screenX)})
+        this.setState({ green: (e.screenX  - startPressX)})
       this.handleChangeStyle(position);
     }
   }

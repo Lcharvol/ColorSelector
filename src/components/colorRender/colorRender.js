@@ -12,9 +12,7 @@ class ColorRender extends Component {
     }
 
     return (
-    <div className="colorRenderContainer">
       <div className="colorRender" style={divStyle} />
-    </div>
     );
   };
 }

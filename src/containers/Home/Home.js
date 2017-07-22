@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import './Home.css';
 
-import ColorSelector from '../../components/colorSelector'
+import ColorSelector from '../../components/colorSelector';
+import Background from '../../components/Background';
 
 class Home extends Component {
 
@@ -13,6 +14,9 @@ class Home extends Component {
 
     return (
       <div className="homepage">
+        <Background />
+        <ColorSelector/>
+        <ColorSelector/>
         <ColorSelector/>
       </div>
     );
