@@ -1,0 +1,15 @@
+.header
+{
+  display: flex;
+  justify-content: center;
+  width:100%;
+  color:white;
+  background-color: rgb(25,25,25);
+  font-size:2em;
+  letter-spacing: 1em;
+}
+.hearder h1
+{
+  color:white;
+  font-size:4em;
+}

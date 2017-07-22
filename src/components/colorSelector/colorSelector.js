@@ -9,9 +9,9 @@ class ColorSelector extends Component {
 
   state = {
     color: {
-      red: 0,
-      green: 0,
-      blue: 0,
+      red: 25,
+      green: 25,
+      blue: 25,
     },
   }
 
