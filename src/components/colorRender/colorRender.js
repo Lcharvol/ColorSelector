@@ -13,6 +13,9 @@ class ColorRender extends Component {
 
     return (
       <div className="colorRender" style={divStyle}>
+        <div className="rotateButton">
+          <i className="fa fa-repeat" aria-hidden="true"></i>
+        </div>
         <div className="sphereEffect" />
       </div>
     );

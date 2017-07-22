@@ -32,6 +32,7 @@ class ColorSelector extends Component {
     const { upgradeColor, id} = this.props;
 
     window.addEventListener("mousemove", this.handleSendColor);
+    window.addEventListener("load", this.handleSendColor);
     return (
       <div className="colorSelector">
         <ColorDivider

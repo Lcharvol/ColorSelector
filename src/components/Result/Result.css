@@ -6,3 +6,11 @@
   background-color:rgb(25,25,25);
   bottom:0;
 }
+.pipe
+{
+  position: absolute;
+  width:10px;
+  height:500px;
+  margin-left:calc(50vw - 5px);
+  background-color: red;
+}

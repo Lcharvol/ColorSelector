@@ -52,3 +52,14 @@
     -webkit-transform: rotateZ(-30deg);
     transform: rotateZ(-30deg);
   }
+  .rotateButton
+  {
+    position: absolute;
+    z-index: 1000;
+    background-color: red;
+  }
+  .rotate
+  {
+    color:white;
+    font-size: 2em;
+  }

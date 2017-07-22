@@ -11,7 +11,10 @@ class Result extends Component {
       backgroundColor: `rgb(${r}, ${g}, ${b})`,
     }
     return (
-      <div className="resultContainer" style={divStyle}/>
+      <div>
+        <div className="pipe" style={divStyle} />
+        <div className="resultContainer" style={divStyle}/>
+      </div>
     );
   }
 }
