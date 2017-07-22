@@ -2,9 +2,10 @@
 {
   display: flex;
   justify-content: center;
+   align-items: center;
   width:100%;
   color:white;
-  background-color: rgb(243,243,243);
+  background-color: none;
   font-size:2em;
   letter-spacing: 1em;
 }
@@ -12,4 +13,13 @@
 {
   color:white;
   font-size:4em;
+}
+.barre
+{
+  width:30px;
+  height:5px;
+  background-color:red;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top:0px;
 }
