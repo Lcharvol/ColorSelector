@@ -4,21 +4,15 @@ import './MainColor.css';
 
 class MainColor extends Component {
 
-  state = {
-    r: 0,
-    g: 0,
-    b: 0,
-  }
-
-  divStyle = {
-
-  }
-  
   render () {
-    return (
-      <div className="mainColor">
+    const { r, g, b } = this.props;
 
-      </div>
+    const divStyle = {
+      backgroundColor: `rgb(${r}, ${g}, ${b})`
+    }
+
+    return (
+      <div className="mainColor" style={divStyle} />
     );
   };
 }

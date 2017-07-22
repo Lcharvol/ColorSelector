@@ -21,12 +21,19 @@ class ColorSelector extends Component {
     if (blue >= 0) {this.setState({color:{red: this.state.color.red, green: this.state.color.green, blue: blue}})};
   }
 
+  handleSendColor = () => {
+    const { red, green, blue} = this.state.color;
+    const { upgradeColor, id } = this.props;
+    upgradeColor(id, red, green, blue)
+  }
+
   render () {
     const { red, green, blue} = this.state.color;
     const { upgradeColor, id} = this.props;
 
+    window.addEventListener("mousemove", this.handleSendColor);
     return (
-      <div className="colorSelector" onMouseDown={() => upgradeColor(id, red, green, blue)}>
+      <div className="colorSelector" onClick={this.handleSendColor}>
         <ColorDivider
           position="top"
           handleChangeColor = {this.handleChangeColor}

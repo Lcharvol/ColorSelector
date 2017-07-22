@@ -26,7 +26,7 @@ class Home extends Component {
   }
 
   render() {
-
+    const { r, g, b } = this.state;
     return (
       <div className="homepage">
         <Header
@@ -38,7 +38,11 @@ class Home extends Component {
             upgradeColor={this.upgradeColor}
             id={1}
           />
-          <MainColor />
+          <MainColor
+            r={r}
+            g={g}
+            b={b}
+          />
           <ColorSelector
             upgradeColor={this.upgradeColor}
             id={2}
