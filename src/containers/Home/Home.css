@@ -1,5 +1,6 @@
 .selectorContainer
 {
+  /*transform: scale(0.8);*/
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

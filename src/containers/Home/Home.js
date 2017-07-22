@@ -51,7 +51,11 @@ class Home extends Component {
             id={3}
           />
         </div>
-        <Result />
+        <Result
+          r={r}
+          g={g}
+          b={b}
+        />
       </div>
     );
   }

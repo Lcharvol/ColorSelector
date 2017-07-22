@@ -50,4 +50,5 @@
     filter: blur(1px);
     z-index: 2;
     -webkit-transform: rotateZ(-30deg);
-    transform: rotateZ(-30deg); }
+    transform: rotateZ(-30deg);
+  }
