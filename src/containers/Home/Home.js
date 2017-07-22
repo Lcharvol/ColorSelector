@@ -15,9 +15,11 @@ class Home extends Component {
     return (
       <div className="homepage">
         <Background />
-        <ColorSelector/>
-        <ColorSelector/>
-        <ColorSelector/>
+        <div className="selectorContainer" >
+          <ColorSelector/>
+          <ColorSelector/>
+          <ColorSelector/>
+        </div>
       </div>
     );
   }
