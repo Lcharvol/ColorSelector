@@ -33,7 +33,7 @@ class ColorSelector extends Component {
 
     window.addEventListener("mousemove", this.handleSendColor);
     return (
-      <div className="colorSelector" onClick={this.handleSendColor}>
+      <div className="colorSelector">
         <ColorDivider
           position="top"
           handleChangeColor = {this.handleChangeColor}

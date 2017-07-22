@@ -38,14 +38,14 @@ class Home extends Component {
             upgradeColor={this.upgradeColor}
             id={1}
           />
+          <ColorSelector
+            upgradeColor={this.upgradeColor}
+            id={2}
+          />
           <MainColor
             r={r}
             g={g}
             b={b}
-          />
-          <ColorSelector
-            upgradeColor={this.upgradeColor}
-            id={2}
           />
           <ColorSelector
             upgradeColor={this.upgradeColor}
